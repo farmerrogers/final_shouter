@@ -1,0 +1,20 @@
+<%= form_for @user do |user_form| %>
+	<%= user_form.error_messages %>
+	
+<ul>
+	<li>
+		<%= user_form.label(:username, "User Name") %>
+		<%= user_form.text_field(:username) %>		
+	</li>
+	<li>
+		<%= user_form.label(:email, "Email Address") %>
+		<%= user_form.text_field(:email) %>		
+	</li>
+	<li>
+		<%= user_form.label(:password, "Password") %>
+		<%= user_form.text_field(:password) %>		
+	</li>	
+</ul>
+	<%= user_form.submit(button_label) %>	
+		
+<% end %>

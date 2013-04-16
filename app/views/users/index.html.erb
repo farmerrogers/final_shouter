@@ -1,0 +1,17 @@
+<% if @user %> 
+	<h1>Hi <%= @user.email %></h1>
+<% else %>
+	<h1>You know you're cool if you're a shouter!</h1>
+<% end %>
+
+<h1>Shout about it!!</h1>
+
+<ul>
+<% @users.each do |u| %>
+	<li>
+		<%= link_to u.username, u %>	(<%= u.id %>)
+	</li>
+<% end %>
+</ul>
+
+<%= render "marketing" %>

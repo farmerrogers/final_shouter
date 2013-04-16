@@ -1,0 +1,9 @@
+<h1><%= @user.username %> Shouts!!!</h1>
+<ul>
+	<li>screen name: <%= @user.username %></li>
+	<li>email: <%= mail_to @user.email %></li>
+</ul>
+
+<%= link_to "Edit this user", edit_user_path(@user) %>
+
+<%= render :partial => "marketing" %>

@@ -12,8 +12,13 @@ class User < ActiveRecord::Base
   has_many :likes
   has_many :liked_shouts, :through => :likes, :source => :shout
   
-  #validates :username, :presence => true
-  validates :username, :uniqueness => true
-  #validates :username, :length => {:minimum=>2,:maximum=>10}
+  validates :email, :presence => true
+  validates :email, :uniqueness => true
+  validates :email, :inclusion => { :in => %w(@),     #copied from rails guides example on line 20
+  	:message => "%{value} is not a valid size." }		#is there anything else I need to do?
+  
+  #  validates :size, :inclusion => { :in => %w(small medium large),
+  #  :message => "%{value} is not a valid size" }
+
   
 end

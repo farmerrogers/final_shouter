@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   validates :email, :presence => true
   validates :email, :uniqueness => true
   validates :email, :inclusion => { :in => %w(@),     #copied from rails guides example on line 20
-  	:message => "%{value} is not a valid size." }		#is there anything else I need to do?
+  	:message => "%{value} is not a valid email address." }		#is there anything else I need to do?
   
   #  validates :size, :inclusion => { :in => %w(small medium large),
   #  :message => "%{value} is not a valid size" }
