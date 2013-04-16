@@ -1,10 +1,14 @@
 FinalShouter::Application.routes.draw do
 
-  get "home/index"
+
 
   devise_for :users
 
-root :to  => "home#index"
+resources :users
+resources :shouts
+
+
+root :to => 'shouts#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

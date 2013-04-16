@@ -4,9 +4,9 @@ FinalShouter::Application.routes.draw do
 
   devise_for :users
 
-resources :users
-resources :shouts
-
+resources :users do
+	resources :shouts
+end
 
 root :to => 'shouts#index'
 

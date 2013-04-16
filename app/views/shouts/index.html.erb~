@@ -1,0 +1,6 @@
+<h1>Shouts#index</h1>
+
+<% for shout in @shouts %>
+	<h2><%= shout.title %></h2>
+<% end %>
+
