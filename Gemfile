@@ -37,6 +37,11 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+gem 'dynamic_form'
+
+gem 'simple_form'
+
+
 gem 'devise'
 
 gem "therubyracer"
