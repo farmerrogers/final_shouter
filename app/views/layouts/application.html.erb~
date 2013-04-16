@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<% flash.each do |name, msg| %>        <!-- what does this do? -->
+<% flash.each do |name, msg| %>
 	<div class="alert alert-<%= name== :notice ? "success" : "error" %>">
 		<a class="close" data-dismiss="alert">&#215</a>
 		<%= content_tag :div, msg, :id => "flash_%{name}" %>
